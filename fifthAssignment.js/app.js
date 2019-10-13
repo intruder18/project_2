@@ -2,6 +2,10 @@ var app = require('express')();
 var async = require('async');
 var bodyParser = require('body-parser');
 var json = bodyParser.json();
+
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use(json);
 app.get('/promise/:msg',(req,res)=>{
     var message = req.params.msg;

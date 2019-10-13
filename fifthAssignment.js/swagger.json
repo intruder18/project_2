@@ -1,0 +1,99 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "description": "sample api login logout",
+        "title": "sample api"
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/promise/:msg": {
+            "get": {
+                "description": "check promises implementation",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "message u want to insert",
+                        "msg": "msg"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "type ": "array",
+                        "description": "successfully signed up."
+                    }
+                }
+            }
+        },
+        "/asyncWaterFall": {
+            "post": {
+                "description": "user sign up",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Username of user",
+                        "name": "userName",
+                        "in": "JSON"
+                    },
+                    {
+                        "type": "string",
+                        "description": "emailId",
+                        "name": "emailId",
+                        "in": "JSON"
+                    },
+                    {
+                        "type": "string",
+                        "description": "Password",
+                        "name": "password",
+                        "in": "JSON"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "user is valid"
+                    }
+                }
+            }
+        },
+        "/asyncAuto": {
+            "get": {
+                "description": "check async auto",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "type ": "array",
+                        "description": "array of all results that are passed"
+                    }
+                }
+            }
+        },
+        "/asyncAwait": {
+            "get": {
+                "description": "check async auto",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "type ": "array",
+                        "description": "array of all results that are passed"
+                    }
+                }
+            }
+        },
+        "/gen": {
+            "get": {
+                "description": "check async auto",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "type ": "string",
+                        "description": "array of all results that are passed"
+                    }
+                }
+            }
+        }
+    }
+}
